@@ -1,0 +1,109 @@
+body {
+    overflow-y: auto; /* oder overflow: auto; für vertikales und horizontales Scrollen */
+    background-color:rgb(255, 255, 255);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: white;
+}
+
+button{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+}
+button:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /*
+    Horizontal offset: 0 means no horizontal offset.
+    Vertical offset: 0 means no vertical offset.
+    Blur radius: 5px in this example, you can adjust this value to control the blur of the shadow.
+    Color: rgba(0, 0, 0, 0.3) specifies a black shadow with 30% opacity. You can change the color and opacity as needed.
+    */
+}
+.flexcontainer{
+    display: flex;
+}
+.logo{
+    height: 5%;
+    width: 5%;
+    padding: 5px;
+    margin-left: 50px;
+}
+.barlogo{
+    display: flex;
+    height: 5%;
+    width: 5%;
+    padding: 5px;
+}
+.content {
+    margin-right: 250px; /* Platz für die Sidebar einfügen, wenn sie ausgefahren ist */
+    transition: margin-right 0.3s ease; /* Fügt eine Transition hinzu, um das Ein- und Ausfahren zu glätten */
+}
+
+.invisible{
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.left-sidebar {
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    overflow-y: auto; /* Wenn der Inhalt in der Seitenleiste zu groß ist */
+    transition: left 0.2s; /* Fügt eine Transition für die right Eigenschaft hinzu*/
+}
+.top-square {
+    width: 400px;
+    height: calc((400px * 9) / 16);
+    background-color: #000000; /* Gray color */    
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+}
+.mid-square {
+    width: 400px;
+    height: calc((400px * 9) / 16);
+    background-color: #000000; /* Gray color */    
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 80px;
+}
+.bot-square {
+    width: 400px;
+    height: calc((400px * 9) / 16);
+    background-color: #000000; /* Gray color */    
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 80px;
+}
+.search-container {
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.search-input {
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
